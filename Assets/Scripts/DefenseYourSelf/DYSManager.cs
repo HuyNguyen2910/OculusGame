@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DYSManager : MonoBehaviour
 {
     public static DYSManager Instance;
+    public Transform player;
 
+    [SerializeField] private Button startButton;
+    [SerializeField] private GameObject startObj;
     [SerializeField] private List<GameObject> target;
     [SerializeField] private Transform containTarget;
-    [SerializeField] private float spawnTime = 1f;
+    [SerializeField] private float spawnTime = 2f;
     [SerializeField] private float minSpawnDistance = 5;
     [SerializeField] private float maxSpawnDistance = 20;
     
@@ -18,7 +22,13 @@ public class DYSManager : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(WaitToSpawn());
+        Time.timeScale = 1;
+        startButton.onClick.AddListener(StartGame);
+    }
+    private void StartGame()
+    {
+        startObj.gameObject.SetActive(false);
+        SpawnTarget();
     }
     private void SpawnTarget()
     {

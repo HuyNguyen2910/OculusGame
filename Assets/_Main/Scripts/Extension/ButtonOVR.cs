@@ -10,14 +10,24 @@ public class ButtonOVR : MonoBehaviour
     public Button btn;
     private void Start()
     {
-        btn = GetComponent<Button>();
-        GetComponent<BoxCollider>().size = GetComponent<RectTransform>().rect.size;
+        if (btn != null)
+        {
+            GetComponent<BoxCollider>().size = GetComponent<RectTransform>().rect.size;
+        }
     }
     public void OnRaycastClick()
     {
-        transform.DOScale(new Vector3(.8f, .8f, .8f), .1f).onComplete += ()=>
+        if (btn != null)
         {
-            transform.DOScale(new Vector3(1, 1, 1), .1f).onComplete += ()=> btn.onClick.Invoke();
-        };
+            transform.DOScale(new Vector3(.8f, .8f, .8f), .1f).onComplete += () =>
+            {
+                transform.DOScale(new Vector3(1, 1, 1), .1f).onComplete += () => btn.onClick.Invoke();
+            };
+        }
+        else
+        {
+            Debug.Log("Shoot!");
+            Destroy(transform.gameObject);
+        }
     }
 }
