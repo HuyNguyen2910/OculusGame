@@ -26,7 +26,7 @@ public class TargetWeapon : MonoBehaviour
         {
             Debug.Log("Killed!");
             Time.timeScale = 0;
-            LoseScreen.Instance.RestartNewGame();
+            DYSCanvas.Instance.RestartNewGame();
         }
     }
 }
