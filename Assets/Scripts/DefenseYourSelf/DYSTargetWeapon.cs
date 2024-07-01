@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class TargetWeapon : MonoBehaviour
+public class DYSTargetWeapon : MonoBehaviour
 {
     [SerializeField] private Transform player;
     private string shieldTag = "Shield";
@@ -20,13 +20,14 @@ public class TargetWeapon : MonoBehaviour
         if (other.tag == shieldTag)
         {
             Debug.Log("Block!");
+            DYSCanvas.Instance.SetBlockScore();
             Destroy(transform.gameObject);
         }
         else if (other.tag == playerTag)
         {
             Debug.Log("Killed!");
             Time.timeScale = 0;
-            DYSCanvas.Instance.RestartNewGame();
+            DYSCanvas.Instance.Lose();
         }
     }
 }

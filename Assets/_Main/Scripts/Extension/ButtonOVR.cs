@@ -27,6 +27,7 @@ public class ButtonOVR : MonoBehaviour
         else
         {
             Debug.Log("Shoot!");
+            DYSCanvas.Instance.SetShootScore();
             Destroy(transform.gameObject);
         }
     }

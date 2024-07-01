@@ -149,7 +149,6 @@ GameObject:
   - component: {fileID: 175150811}
   - component: {fileID: 175150814}
   - component: {fileID: 175150813}
-  - component: {fileID: 175150812}
   m_Layer: 5
   m_Name: HighScoreText
   m_TagString: Untagged
@@ -176,27 +175,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.5, y: 5}
   m_SizeDelta: {x: 3, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &175150812
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175150810}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &175150813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +195,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Block : 99  Shoot : 99'
+  m_text: 'Block : 0  Shoot : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
   m_sharedMaterial: {fileID: -9221056233183343877, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
@@ -463,7 +441,6 @@ GameObject:
   - component: {fileID: 263286342}
   - component: {fileID: 263286345}
   - component: {fileID: 263286344}
-  - component: {fileID: 263286343}
   m_Layer: 5
   m_Name: HighScoreText
   m_TagString: Untagged
@@ -490,27 +467,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.5, y: 5}
   m_SizeDelta: {x: 3, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &263286343
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263286341}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &263286344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -619,7 +575,6 @@ GameObject:
   - component: {fileID: 324703647}
   - component: {fileID: 324703650}
   - component: {fileID: 324703649}
-  - component: {fileID: 324703648}
   m_Layer: 5
   m_Name: HighScoreText
   m_TagString: Untagged
@@ -646,27 +601,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.5, y: 5}
   m_SizeDelta: {x: 3, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &324703648
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 324703646}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &324703649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,7 +840,6 @@ GameObject:
   - component: {fileID: 553408964}
   - component: {fileID: 553408967}
   - component: {fileID: 553408966}
-  - component: {fileID: 553408965}
   m_Layer: 5
   m_Name: HighScoreBlack
   m_TagString: Untagged
@@ -934,27 +867,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 270, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &553408965
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 553408963}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &553408966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,7 +1075,6 @@ GameObject:
   - component: {fileID: 819603743}
   - component: {fileID: 819603746}
   - component: {fileID: 819603745}
-  - component: {fileID: 819603744}
   m_Layer: 5
   m_Name: HighScoreText
   m_TagString: Untagged
@@ -1190,27 +1101,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1.5, y: 5}
   m_SizeDelta: {x: 3, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &819603744
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 819603742}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &819603745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,7 +1121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Block : 99  Shoot : 99'
+  m_text: 'Block : 0  Shoot : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
   m_sharedMaterial: {fileID: -9221056233183343877, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
@@ -1324,7 +1214,6 @@ GameObject:
   - component: {fileID: 909610599}
   - component: {fileID: 909610602}
   - component: {fileID: 909610601}
-  - component: {fileID: 909610600}
   m_Layer: 5
   m_Name: HighScoreBlack
   m_TagString: Untagged
@@ -1352,27 +1241,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 270, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &909610600
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909610598}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &909610601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2115,7 +1983,6 @@ GameObject:
   - component: {fileID: 1296110704}
   - component: {fileID: 1296110707}
   - component: {fileID: 1296110706}
-  - component: {fileID: 1296110705}
   m_Layer: 5
   m_Name: HighScoreData
   m_TagString: Untagged
@@ -2143,27 +2010,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -100}
   m_SizeDelta: {x: 270, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1296110705
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296110703}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1296110706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,7 +2030,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Block : 99  Shoot : 99'
+  m_text: 'Block : 0  Shoot : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
   m_sharedMaterial: {fileID: -9221056233183343877, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
@@ -2397,7 +2243,6 @@ GameObject:
   - component: {fileID: 1574096093}
   - component: {fileID: 1574096096}
   - component: {fileID: 1574096095}
-  - component: {fileID: 1574096094}
   m_Layer: 5
   m_Name: HighScoreData
   m_TagString: Untagged
@@ -2425,27 +2270,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -100}
   m_SizeDelta: {x: 270, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &1574096094
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574096092}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b569931cf45d53a488cb881567d55d71, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1574096095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2466,7 +2290,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Block : 99  Shoot : 99'
+  m_text: 'Block : 0  Shoot : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
   m_sharedMaterial: {fileID: -9221056233183343877, guid: a6446991ef31ced4190c53c206cf4b3e, type: 2}
@@ -2855,6 +2679,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RestartButton: {fileID: 379545151}
   loseImage: {fileID: 1701781325}
+  highScoreText: {fileID: 1296110706}
+  highScoreText1: {fileID: 175150813}
+  scoreText: {fileID: 1574096095}
+  scoreText1: {fileID: 819603745}
+  blockString: 'Block : '
+  shootString: '  Shoot : '
+  blockCount: 0
+  shootCount: 0
+  blockHS: 0
+  shootHS: 0
 --- !u!4 &1885556699 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8222592153867894239, guid: d69b587697e696a449cda46f401f669c, type: 3}
@@ -4108,7 +3942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "DEFENSE \nYOUR SELF"
+  m_text: "DEFENSE \nYOURSELF"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
