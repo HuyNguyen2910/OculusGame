@@ -5,7 +5,10 @@ using DG.Tweening;
 
 public class DYSTargetWeapon : MonoBehaviour
 {
+    public int soundDestroy;
+
     [SerializeField] private Transform player;
+
     private string shieldTag = "Shield";
     private string playerTag = "Player";
 
@@ -21,13 +24,27 @@ public class DYSTargetWeapon : MonoBehaviour
         {
             Debug.Log("Block!");
             DYSCanvas.Instance.SetBlockScore();
+            soundDestroy = 1;
             Destroy(transform.gameObject);
         }
         else if (other.tag == playerTag)
         {
             Debug.Log("Killed!");
             Time.timeScale = 0;
-            DYSCanvas.Instance.Lose();
+            DYSManager.Instance.SetButtonStart();
+            //DYSCanvas.Instance.Lose();
+        }
+    }
+    private void OnDestroy()
+    {
+        switch (soundDestroy)
+        {
+            case 1:
+                DYSManager.Instance.blockedAudio.Play();
+                break;
+            case 2:
+                DYSManager.Instance.shootedAudio.Play();
+                break;
         }
     }
 }

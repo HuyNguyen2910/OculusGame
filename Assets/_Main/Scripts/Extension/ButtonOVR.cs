@@ -19,16 +19,21 @@ public class ButtonOVR : MonoBehaviour
     {
         if (btn != null)
         {
-            transform.DOScale(new Vector3(.8f, .8f, .8f), .1f).onComplete += () =>
-            {
-                transform.DOScale(new Vector3(1, 1, 1), .1f).onComplete += () => btn.onClick.Invoke();
-            };
+            //transform.DOScale(new Vector3(.8f, .8f, .8f), .1f).onComplete += () =>
+            //{
+            //    transform.DOScale(new Vector3(1, 1, 1), .1f).onComplete += () => btn.onClick.Invoke();
+            //};
+            btn.onClick.Invoke();
         }
         else
         {
-            Debug.Log("Shoot!");
-            DYSCanvas.Instance.SetShootScore();
-            Destroy(transform.gameObject);
+            if (DYSManager.Instance.time != 0)
+            {
+                Debug.Log("Shoot!");
+                DYSCanvas.Instance.SetShootScore();
+                GetComponent<DYSTargetWeapon>().soundDestroy = 2;
+                Destroy(transform.gameObject);
+            }
         }
     }
 }

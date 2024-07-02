@@ -41,11 +41,11 @@ public class DYSCanvas : MonoBehaviour
         RestartButton.onClick.AddListener(RestartGame);
         GetHighScore();
     }
-    public void Lose()
-    {
-        loseImage.SetActive(true);
-    }
-    private void RestartGame()
+    //public void Lose()
+    //{
+    //    loseImage.SetActive(true);
+    //}
+    public void RestartGame()
     {
         if (blockCount > blockHS)
         {
@@ -64,8 +64,9 @@ public class DYSCanvas : MonoBehaviour
         blockCount = 0;
         shootCount = 0;
         SetScore();
-        SceneManager.LoadScene(sceneName);
-        loseImage.SetActive(false);
+        DYSManager.Instance.StartGame();
+        //SceneManager.LoadScene(sceneName);
+        //loseImage.SetActive(false);
     }
     private void GetHighScore()
     {
