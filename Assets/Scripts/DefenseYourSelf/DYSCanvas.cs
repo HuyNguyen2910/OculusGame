@@ -64,7 +64,7 @@ public class DYSCanvas : MonoBehaviour
         blockCount = 0;
         shootCount = 0;
         SetScore();
-        DYSManager.Instance.StartGame();
+        GameManager.Instance.StartGame();
         //SceneManager.LoadScene(sceneName);
         //loseImage.SetActive(false);
     }

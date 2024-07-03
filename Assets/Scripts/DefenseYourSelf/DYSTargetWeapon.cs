@@ -15,7 +15,7 @@ public class DYSTargetWeapon : MonoBehaviour
     private float reachTime = 8;
     private void Start()
     {
-        player = DYSManager.Instance.player;
+        player = GameManager.Instance.player;
         transform.DOMove(player.position, reachTime);
     }
     private void OnTriggerEnter(Collider other)
@@ -31,7 +31,7 @@ public class DYSTargetWeapon : MonoBehaviour
         {
             Debug.Log("Killed!");
             Time.timeScale = 0;
-            DYSManager.Instance.SetButtonStart();
+            GameManager.Instance.SetButtonStart();
             //DYSCanvas.Instance.Lose();
         }
     }
@@ -40,10 +40,10 @@ public class DYSTargetWeapon : MonoBehaviour
         switch (soundDestroy)
         {
             case 1:
-                DYSManager.Instance.blockedAudio.Play();
+                GameManager.Instance.blockedAudio.Play();
                 break;
             case 2:
-                DYSManager.Instance.shootedAudio.Play();
+                GameManager.Instance.shootedAudio.Play();
                 break;
         }
     }

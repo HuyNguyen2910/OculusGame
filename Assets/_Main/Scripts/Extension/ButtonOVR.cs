@@ -27,12 +27,13 @@ public class ButtonOVR : MonoBehaviour
         }
         else
         {
-            if (DYSManager.Instance.time != 0)
+            if (GameManager.Instance.time != 0)
             {
                 Debug.Log("Shoot!");
                 DYSCanvas.Instance.SetShootScore();
                 GetComponent<DYSTargetWeapon>().soundDestroy = 2;
                 Destroy(transform.gameObject);
+                GameManager.Instance.SpawnTarget();
             }
         }
     }
