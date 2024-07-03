@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8879537536852019075}
   - component: {fileID: 465907055715580185}
   m_Layer: 0
-  m_Name: DYSPlayer
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,3 +97,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootAudioSource: {fileID: 0}
+  isShoot: 0
