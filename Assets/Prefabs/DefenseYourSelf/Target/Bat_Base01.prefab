@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2936142714183354369}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.011245713, y: 0.9768156, z: -0.05304131, w: -0.20710252}
-  m_LocalPosition: {x: 8.068179, y: 2.1656237, z: 18.171806}
+  m_LocalRotation: {x: 0.22018097, y: 0.19290638, z: -0.04446829, w: 0.9551597}
+  m_LocalPosition: {x: -6.978614, y: 8.755448, z: -16.5723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e642ceda48c6484a8ee70de8f8c854a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundDestroy: 0
   player: {fileID: 0}
 --- !u!65 &8277062722671017553
 BoxCollider:
