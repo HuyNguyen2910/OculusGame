@@ -14,7 +14,6 @@ Material:
   m_ValidKeywords:
   - _ALPHABLEND_ON
   - _EMISSION
-  - _NORMALMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -86,7 +85,7 @@ Material:
     - _EmissionEnabled: 1
     - _FlipbookMode: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.847
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _InvFade: 1
     - _LightingEnabled: 1
