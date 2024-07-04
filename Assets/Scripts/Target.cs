@@ -9,37 +9,47 @@ public class Target : MonoBehaviour
     [SerializeField] private Transform playerCam;
     [SerializeField] private float showTime = 5;
     [SerializeField] private float spawnDistance = 5;
+    public Sequence sequence;
 
     private float timer;
 
     private void Start()
     {
-        ChangePos();
+        //ChangePos();
     }
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer > showTime)
-        {
-            ChangePos();
-        }
+        //timer += Time.deltaTime;
+        //if (timer > showTime)
+        //{
+        //    ChangePos();
+        //}
     }
-    public void ChangePos()
-    {
-        timer = 0;
-        transform.position = Random.onUnitSphere * spawnDistance + new Vector3(0, 2, 0);
-        transform.position = new Vector3(
-            transform.position.x,
-            Mathf.Abs(transform.position.y),
-            transform.position.z);
+    //public void ChangePos()
+    //{
+    //    timer = 0;
+    //    transform.position = Random.onUnitSphere * spawnDistance + new Vector3(0, 2, 0);
+    //    transform.position = new Vector3(
+    //        transform.position.x,
+    //        Mathf.Abs(transform.position.y),
+    //        transform.position.z);
 
-        transform.LookAt(playerCam);
-    }
-    public void SpawnPoint(int s)
+    //    transform.LookAt(playerCam);
+    //}
+    //public void SpawnPoint(int s)
+    //{
+    //    Point pointSpawned = Instantiate(point, GameManager.Instance.containPoint);
+    //    pointSpawned.transform.position = transform.position;
+    //    pointSpawned.ShowPoint(s);
+    //    ChangePos();
+    //}
+    public void Scale()
     {
-        Point pointSpawned = Instantiate(point, GameManager.Instance.containPoint);
-        pointSpawned.transform.position = transform.position;
-        pointSpawned.ShowPoint(s);
-        ChangePos();
+        if (SCManager.Instance.isPlay)
+        {
+            sequence = DOTween.Sequence();
+            sequence.Append(transform.DOScale(Vector3.one, 4)).AppendCallback(() => SCManager.Instance.Lose());
+        }
+
     }
 }

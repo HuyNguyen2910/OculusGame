@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class ButtonOVR : MonoBehaviour
 {
     public Button btn;
-    public Target target;
-    public int score;
     private void Start()
     {
         if (btn != null)
@@ -29,12 +27,15 @@ public class ButtonOVR : MonoBehaviour
         }
         else
         {
-            if (GameManager.Instance.isPlay)
+            if (SCManager.Instance.isPlay)
             {
                 Debug.Log("Shoot!");
-                CanvasScore.Instance.AddScore(score);
-                GameManager.Instance.shootedAudio.Play();
-                target.SpawnPoint(score);
+                //CanvasScore.Instance.AddScore(score);
+                SCManager.Instance.shootedAudio.Play();
+                //target.SpawnPoint(score);
+                GetComponent<Target>().sequence.Kill();
+                SCManager.Instance.SpawnTarget();
+                Destroy(gameObject);
             }
         }
     }

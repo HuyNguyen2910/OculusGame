@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         containTarget.SetActive(true);
         foreach(Target target in targets)
         {
-            target.ChangePos();
+            //target.ChangePos();
         }
 
         isPlay = true;
