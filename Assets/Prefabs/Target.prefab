@@ -513,6 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e642ceda48c6484a8ee70de8f8c854a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: {fileID: 5633778935349046907, guid: 1274119ecb8a24148b4169c562335df5, type: 3}
   playerCam: {fileID: 0}
   showTime: 5
   spawnDistance: 5

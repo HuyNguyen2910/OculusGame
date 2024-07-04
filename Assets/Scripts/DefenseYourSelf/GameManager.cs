@@ -6,7 +6,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public Camera eventCam;
     public Transform player;
+    public Transform containPoint;
     public AudioSource shootedAudio;
     public AudioSource loseAudio;
     public bool isPlay;
@@ -66,6 +68,10 @@ public class GameManager : MonoBehaviour
         loseAudio.Play();
         startObj.gameObject.SetActive(true);
         containTarget.SetActive(false);
+        foreach(Transform child in containPoint)
+        {
+            Destroy(child.gameObject);
+        }
         startButton.onClick.AddListener(CanvasScore.Instance.RestartGame);
         startText.text = restartString;
         titleText.text = loseString;

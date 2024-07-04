@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class Target : MonoBehaviour
 {
+    [SerializeField] private Point point;
     [SerializeField] private Transform playerCam;
     [SerializeField] private float showTime = 5;
     [SerializeField] private float spawnDistance = 5;
@@ -33,5 +34,12 @@ public class Target : MonoBehaviour
             transform.position.z);
 
         transform.LookAt(playerCam);
+    }
+    public void SpawnPoint(int s)
+    {
+        Point pointSpawned = Instantiate(point, GameManager.Instance.containPoint);
+        pointSpawned.transform.position = transform.position;
+        pointSpawned.ShowPoint(s);
+        ChangePos();
     }
 }

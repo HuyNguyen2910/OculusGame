@@ -34,7 +34,7 @@ public class ButtonOVR : MonoBehaviour
                 Debug.Log("Shoot!");
                 CanvasScore.Instance.AddScore(score);
                 GameManager.Instance.shootedAudio.Play();
-                target.ChangePos();
+                target.SpawnPoint(score);
             }
         }
     }
