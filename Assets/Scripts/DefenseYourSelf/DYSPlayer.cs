@@ -9,7 +9,7 @@ public class DYSPlayer : MonoBehaviour
     void Update()
     {
         float f = OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);
-        if (f > 0f && !isShoot && GameManager.Instance.time != 0)
+        if (f > 0f && !isShoot && GameManager.Instance.isPlay)
         {
             isShoot = true;
             Fire();

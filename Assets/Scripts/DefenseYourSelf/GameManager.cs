@@ -10,20 +10,22 @@ public class GameManager : MonoBehaviour
     public AudioSource shootedAudio;
     public AudioSource blockedAudio;
     public AudioSource loseAudio;
+    public bool isPlay;
+    public float gameTime;
     public float time;
 
     [SerializeField] private Button startButton;
     [SerializeField] private TextMeshProUGUI titleText;
+    [SerializeField] private TextMeshProUGUI titleText1;
     [SerializeField] private TextMeshProUGUI startText;
     [SerializeField] private GameObject startObj;
-    [SerializeField] private GameObject target;
-    [SerializeField] private Transform containTarget;
-    [SerializeField] private float spawnTime = 4f;
-    [SerializeField] private float spawnDistance = 5;
-    [SerializeField] private float maxSpawnDistance = 20;
+    [SerializeField] private GameObject containTarget;
+    [SerializeField] private List<Target> targets;
+    [SerializeField] private TextMeshProUGUI timerText;
 
-    [SerializeField] private string loseString = "YOU LOSE!";
+    [SerializeField] private string loseString = "Time Over!";
     [SerializeField] private string restartString = "Restart";
+    [SerializeField] private string timerString = "Timer: ";
     
     private void Awake()
     {
@@ -31,49 +33,43 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        isPlay = false;
         startButton.onClick.AddListener(StartGame);
     }
     private void Update()
     {
-        if (time > 0)
+        if (isPlay)
         {
-            time += Time.deltaTime;
-            if (time > spawnTime)
+            time -= Time.deltaTime;
+            timerText.text = timerString + Mathf.Round(time);
+            if (time <= 0)
             {
-                SpawnTarget();
-                time = 0.001f;
+                TimeOver();
             }
         }
     }
     public void StartGame()
     {
-        Time.timeScale = 1;
-        startObj.gameObject.SetActive(false);
-        foreach (Transform transform in containTarget)
+        time = gameTime;
+        startObj.SetActive(false);
+        containTarget.SetActive(true);
+        foreach(Target target in targets)
         {
-            Destroy(transform.gameObject);
-        }    
-        SpawnTarget();
-    }
-    public void SpawnTarget()
-    {
-        target.transform.position = Random.insideUnitCircle * spawnDistance;
-        target.transform.position = new Vector3(
-            target.transform.position.x, 
-            Mathf.Abs(target.transform.position.y), 
-            target.transform.position.z);
+            target.ChangePos();
+        }
 
-        target.transform.LookAt(containTarget);
-        Instantiate(target, containTarget);
-        time = 0.001f;
+        isPlay = true;
     }
-    public void SetButtonStart()
+    public void TimeOver()
     {
+        isPlay = false;
+        timerText.text = timerString + 0;
         loseAudio.Play();
-        time = 0;
         startObj.gameObject.SetActive(true);
-        startButton.onClick.AddListener(DYSCanvas.Instance.RestartGame);
+        containTarget.SetActive(false);
+        startButton.onClick.AddListener(CanvasScore.Instance.RestartGame);
         startText.text = restartString;
         titleText.text = loseString;
+        titleText1.text = loseString;
     }
 }
