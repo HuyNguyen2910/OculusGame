@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Transform player;
     public AudioSource shootedAudio;
-    public AudioSource blockedAudio;
     public AudioSource loseAudio;
     public bool isPlay;
     public float gameTime;
