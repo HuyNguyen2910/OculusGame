@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        startButton.onClick.AddListener(CanvasScore.Instance.RestartGame);
+        //startButton.onClick.AddListener(CanvasScore.Instance.RestartGame);
         startText.text = restartString;
         titleText.text = loseString;
         titleText1.text = loseString;

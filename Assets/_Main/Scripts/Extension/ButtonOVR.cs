@@ -30,7 +30,7 @@ public class ButtonOVR : MonoBehaviour
             if (SCManager.Instance.isPlay)
             {
                 Debug.Log("Shoot!");
-                //CanvasScore.Instance.AddScore(score);
+                CanvasScore.Instance.AddScore(1);
                 SCManager.Instance.shootedAudio.Play();
                 //target.SpawnPoint(score);
                 GetComponent<Target>().sequence.Kill();

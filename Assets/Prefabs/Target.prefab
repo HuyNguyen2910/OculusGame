@@ -132,9 +132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {fileID: 5633778935349046907, guid: 1274119ecb8a24148b4169c562335df5, type: 3}
-  playerCam: {fileID: 0}
   showTime: 5
   spawnDistance: 5
+  mesh: {fileID: 1343754373899946113}
 --- !u!135 &1760135864780554524
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class CanvasScore : MonoBehaviour
     {
         score = 0;
         SetScore();
-        GameManager.Instance.StartGame();
+        //GameManager.Instance.StartGame();
     }
     public void AddScore(int addScore)
     {

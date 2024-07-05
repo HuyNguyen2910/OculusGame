@@ -6,9 +6,9 @@ using DG.Tweening;
 public class Target : MonoBehaviour
 {
     [SerializeField] private Point point;
-    [SerializeField] private Transform playerCam;
     [SerializeField] private float showTime = 5;
     [SerializeField] private float spawnDistance = 5;
+    [SerializeField] private MeshRenderer mesh;
     public Sequence sequence;
 
     private float timer;
@@ -48,8 +48,11 @@ public class Target : MonoBehaviour
         if (SCManager.Instance.isPlay)
         {
             sequence = DOTween.Sequence();
-            sequence.Append(transform.DOScale(Vector3.one, 4)).AppendCallback(() => SCManager.Instance.Lose());
+            sequence.Append(transform.DOScale(Vector3.one, 4)).AppendCallback(() => SCManager.Instance.Lose(this));
         }
-
+    }
+    public void Explore()
+    {
+        mesh.material.color = Color.red;
     }
 }

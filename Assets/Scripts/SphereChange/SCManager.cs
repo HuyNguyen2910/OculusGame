@@ -52,6 +52,7 @@ public class SCManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        CanvasScore.Instance.RestartGame();
         SpawnTarget();
     }
     public void SpawnTarget()
@@ -60,9 +61,10 @@ public class SCManager : MonoBehaviour
         tar.Scale();
         UpdateSpawnTime();
     }
-    public void Lose()
+    public void Lose(Target target)
     {
         DOTween.Clear();
+        target.Explore();
         isPlay = false;
         loseAudio.Play();
         startObj.gameObject.SetActive(true);
