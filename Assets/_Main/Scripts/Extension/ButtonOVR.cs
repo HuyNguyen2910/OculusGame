@@ -33,7 +33,6 @@ public class ButtonOVR : MonoBehaviour
                 CanvasScore.Instance.AddScore(1);
                 SCManager.Instance.shootedAudio.Play();
                 //target.SpawnPoint(score);
-                GetComponent<Target>().sequence.Kill();
                 SCManager.Instance.SpawnTarget();
                 Destroy(gameObject);
             }

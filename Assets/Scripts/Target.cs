@@ -43,13 +43,14 @@ public class Target : MonoBehaviour
     //    pointSpawned.ShowPoint(s);
     //    ChangePos();
     //}
-    public void Scale()
+    public void Move(Vector3 direction)
     {
-        if (SCManager.Instance.isPlay)
-        {
-            sequence = DOTween.Sequence();
-            sequence.Append(transform.DOScale(Vector3.one, 4)).AppendCallback(() => SCManager.Instance.Lose(this));
-        }
+        GetComponent<Rigidbody>().velocity = direction;
+        //if (SCManager.Instance.isPlay)
+        //{
+        //    sequence = DOTween.Sequence();
+        //    sequence.Append(transform.DOScale(Vector3.one, 4)).AppendCallback(() => SCManager.Instance.Lose(this));
+        //}
     }
     public void Explore()
     {
