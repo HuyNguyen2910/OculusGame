@@ -79,10 +79,8 @@ public class SCManager : MonoBehaviour
         tar.Move(direction);
         UpdateSpawnTime();
     }
-    public void Lose(Target target)
+    public void Lose()
     {
-        DOTween.Clear();
-        target.Explore();
         isPlay = false;
         loseAudio.Play();
         startObj.gameObject.SetActive(true);

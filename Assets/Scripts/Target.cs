@@ -17,6 +17,17 @@ public class Target : MonoBehaviour
     {
         //ChangePos();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Explore")
+        {
+            if (SCManager.Instance.isPlay)
+            {
+                SCManager.Instance.Lose();
+            }
+            Destroy(gameObject);
+        }
+    }
     private void Update()
     {
         //timer += Time.deltaTime;
@@ -52,8 +63,8 @@ public class Target : MonoBehaviour
         //    sequence.Append(transform.DOScale(Vector3.one, 4)).AppendCallback(() => SCManager.Instance.Lose(this));
         //}
     }
-    public void Explore()
-    {
-        mesh.material.color = Color.red;
-    }
+    //public void Explore()
+    //{
+    //    mesh.material.color = Color.red;
+    //}
 }
