@@ -15,6 +15,7 @@ public class Target : MonoBehaviour
 
     private void Start()
     {
+        transform.DORotate(new Vector3(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360)), 20);
         //ChangePos();
     }
     private void OnTriggerEnter(Collider other)
